@@ -1,5 +1,6 @@
 
 header.main-header {
+  background-color: black;
   width: 100%;
   display: flex;
   padding: 10px 25px;
@@ -9,13 +10,7 @@ header.main-header {
   box-sizing: border-box;
 
 }
-ul.navbar{
-  list-style: none;
-  display: flex;
-}
-ul.navbar li {
-  margin-right: 30px;
-}
+
 .container-logo{
   width: 80px;
 }

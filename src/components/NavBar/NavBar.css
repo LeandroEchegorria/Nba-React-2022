@@ -1,0 +1,17 @@
+.container-logo{
+    box-shadow: 5px -5px 5px gray ;
+
+}
+.navbar li Button:hover{
+    box-shadow: 2px 2px 2px white ;
+}
+ul.navbar{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+.navbar li{
+    width: fit-contents;
+    margin: 10px;
+}

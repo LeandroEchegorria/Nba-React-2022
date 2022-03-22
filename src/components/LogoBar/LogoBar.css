@@ -1,0 +1,15 @@
+.logo-container{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+img {
+    width: 40px;
+    display: flex;
+    align-items: center;
+ 
+}
+ul{
+    padding-inline-start: 5px;
+}

@@ -1,0 +1,12 @@
+ 
+ [
+    {   
+        "name":"Adidas Adizero Rose 1", 
+        "price": 200, 
+        "id": 1, 
+        "size":"8", 
+        "image": "../img/shoes/Adidas_Adizero_Rose1.png"
+    }
+
+   
+]

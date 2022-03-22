@@ -1,0 +1,8 @@
+.container-cards{
+    width: 80%;
+    display: flex;
+    border: solid 1px white;
+    margin: 50px;
+    
+    
+}
