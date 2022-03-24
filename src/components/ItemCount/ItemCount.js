@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './ItemCount.css'
+import './ItemCount.css';
 
 
  const ItemCount = ({stock, onAdd}) => {
@@ -13,7 +13,11 @@ import './ItemCount.css'
     if (count >0){
       setCount(count - 1);
   }}
-  
+  function onAdd () {
+    return(
+      console.log(`Se agregaron ${(count)} productos al carrito`)
+    )
+  } 
   return (
     <>
       <button onClick={onRemove}>-</button>

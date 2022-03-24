@@ -1,13 +1,6 @@
 import './Card.css';
 import ItemCount from '../ItemCount/ItemCount';
 
-function onAdd () {
-  return(
-    console.log("hola")
-  )
-}
-
-
 const Card = ({data}) => {
   const {title, size, price, image, stock} = data;
 

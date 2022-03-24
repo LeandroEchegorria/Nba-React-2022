@@ -2,6 +2,7 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import LogoBar from './components/LogoBar/LogoBar';
+import ListProducts from './components/ListProducts/ListProducts';
 
 
 function App() {
@@ -10,12 +11,10 @@ function App() {
       <NavBar />
       <LogoBar/>
       
-      <ItemListContainer>
-        <h3>Productos Recom.</h3>
-      </ItemListContainer>
-      <ItemListContainer>
-        <h3>Productos en oferta</h3>
-      </ItemListContainer>
+      <ListProducts>
+        <h3>Productos Recomendados</h3>
+      </ListProducts>
+
     </div>
   );
 }
