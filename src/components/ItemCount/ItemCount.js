@@ -14,9 +14,9 @@ import './ItemCount.css';
       setCount(count - 1);
   }}
   function onAdd () {
-    return(
+      if (count >0){
       console.log(`Se agregaron ${(count)} productos al carrito`)
-    )
+    }
   } 
   return (
     <>

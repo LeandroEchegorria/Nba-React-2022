@@ -3,6 +3,8 @@ import logo from '../../logo.png'
 import Button from '@mui/material/Button';
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
+import Menu from '../Menu/Menu';
+
 
 function NavBar ({ children }) {
     return (
@@ -14,7 +16,9 @@ function NavBar ({ children }) {
 
         <ul className='navbar'>
             <li><Button variant="contained">Home</Button></li>
-            <li><Button variant="contained">Productos</Button></li>
+            <li>
+              <Menu title="Productos" option1={'Camisetas'} option2={'Zapatillas'} option3={'Accesorios'} />
+            </li>
             <li><Button variant="contained">Nosotros</Button></li>
             <li><Button variant="contained">Contacto</Button></li>
             <li><Button variant="contained"><CartWidget /></Button></li>
