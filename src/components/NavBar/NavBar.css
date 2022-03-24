@@ -13,5 +13,8 @@ ul.navbar{
 }
 .navbar li{
     width: fit-contents;
-    margin: 10px;
+    margin: 5px;
+}
+h1{
+    color: white;
 }

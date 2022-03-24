@@ -10,7 +10,12 @@ function App() {
       <NavBar />
       <LogoBar/>
       
-      <ItemListContainer />
+      <ItemListContainer>
+        <h3>Productos Recom.</h3>
+      </ItemListContainer>
+      <ItemListContainer>
+        <h3>Productos en oferta</h3>
+      </ItemListContainer>
     </div>
   );
 }

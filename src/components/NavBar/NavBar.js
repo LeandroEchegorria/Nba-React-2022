@@ -10,6 +10,7 @@ function NavBar ({ children }) {
         <div className='container-logo'>
           <img src={logo} className="img-header" alt=''/>
         </div>
+        <h1>NBA Basketball Shop</h1>
 
         <ul className='navbar'>
             <li><Button variant="contained">Home</Button></li>
