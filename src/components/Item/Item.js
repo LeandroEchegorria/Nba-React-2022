@@ -1,7 +1,7 @@
-import './Card.css';
+import './Item.css';
 import ItemCount from '../ItemCount/ItemCount';
 
-const Card = ({data}) => {
+const Item = ({data}) => {
   const {title, size, price, image, stock} = data;
 
   return (
@@ -17,4 +17,4 @@ const Card = ({data}) => {
     
   )
 }
-export default Card;
+export default Item;

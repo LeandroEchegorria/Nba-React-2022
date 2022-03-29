@@ -1,11 +1,16 @@
-import Card from '../Card/Card';
-import './ListProducts.css';
+import Item from '../Item/Item';
+import './ItemList.css';
 import item1 from '../../../src/img/shoes/Adidas_Adizero_Rose1.png';
+import item2 from '../../../src/img/shoes/Nike_Giannis_Inmortality.png';
+import item3 from '../../../src/img/shoes/Adidas_DON_ISSUE2.png';
+import item4 from '../../../src/img/shoes/Nike_KD14.png';
+import item5 from '../../../src/img/shoes/Adidas_Trae_Young1.png';
+import item6 from '../../../src/img/shoes/Adidas_DON_ISSUE3.png';
 import { useState, useEffect } from 'react';
 
 
 //componente declarado forma moderna
-const ListProducts = ({children}) => {
+const ItemList = ({children}) => {
 
     const mockProductos =   [
         {
@@ -21,7 +26,7 @@ const ListProducts = ({children}) => {
             title:'Nike 1',
             size: 8 ,
             price: 145,
-            image: item1,
+            image: item2,
             stock: 5
         },
         {
@@ -29,7 +34,7 @@ const ListProducts = ({children}) => {
             title:'Adidas Adizero Rose 2',
             size:9.5 ,
             price:145,
-            image: item1,
+            image: item3,
             stock: 3
         },
         {
@@ -37,7 +42,7 @@ const ListProducts = ({children}) => {
             title:'Under Armour Curry 9',
             size:9.5 ,
             price:100,
-            image: item1,
+            image: item4,
             stock: 0
         },
         {
@@ -45,7 +50,7 @@ const ListProducts = ({children}) => {
             title:'Adidas Trae Young 1',
             size:9.5 ,
             price:110,
-            image: item1,
+            image: item5,
             stock: 2
         },    
         {
@@ -53,7 +58,7 @@ const ListProducts = ({children}) => {
             title:'Adidas Adizero Rose 3',
             size:9.5 ,
             price:125,
-            image: item1,
+            image: item6,
             stock: 4
         }
     ]
@@ -72,23 +77,23 @@ const ListProducts = ({children}) => {
 
     useEffect( () => {
         getProducts().then( (data) => {
-            setProducts(data)
-        }).finally( () => {console.log("Termino la llamada")})
-    }, )
+            setProducts(data);
+        }).finally( () => {
+            console.log("Termino la llamada")
+        })
+    }, [] )
 
     return (
         <>
-        <h2 className='title-product'> {children}</h2>
         <div className="container-cards">
-
-        {products.map( (producto , id) => {
-            return (
-                <Card data={producto} key={id}/>
-            )
-        })}
+            {products.map( (producto , id) => {
+                return (
+                    <Item data={producto} key={id}/>
+                )
+            })}
 
         </div>
         </>
     )
 }
-export default ListProducts;
+export default ItemList;

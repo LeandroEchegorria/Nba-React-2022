@@ -1,13 +1,17 @@
 import './ItemListContainer.css';
-import ListProducts from '../ListProducts/ListProducts';
+import ItemList from '../ItemList/ItemList';
 
 
 //componente declarado forma moderna
-const ItemListContainer = () => {
+const ItemListContainer = ({children}) => {
     return (
-        <div className="container-cards">
-            <ListProducts />
-        </div>
+        <>
+            <h2>{children}</h2>
+            <div className="container-cards">
+                <ItemList />
+            </div>
+        </>
+
         
     )
 }
