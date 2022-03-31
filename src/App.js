@@ -2,7 +2,7 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import LogoBar from './components/LogoBar/LogoBar';
-import ItemList from './components/ItemList/ItemList';
+
 
 
 

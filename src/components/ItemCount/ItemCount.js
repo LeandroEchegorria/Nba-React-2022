@@ -17,7 +17,7 @@ import './ItemCount.css';
   useEffect( () => {
     stock = stock-count;
  
-},onAdd)
+},[])
   return (
     //Renderizado condicional
     <div>

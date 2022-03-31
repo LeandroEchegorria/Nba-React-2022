@@ -6,12 +6,12 @@ const Item = ({data}) => {
 
   return (
     <div className="card-item">
-        <h3>{title}</h3>
-        <img alt='title' src={image}></img>
-        <p>Precio: USD {price} </p>
-        <p>Talle: {size}</p>
+      <h3>{title}</h3>
+      <img alt='title' src={image}></img>
+      <p>Precio: USD {price} </p>
+      <p>Talle: {size}</p>
 
-        <ItemCount stock={stock}/>
+      <ItemCount stock={stock}/>
 
     </div>
     
