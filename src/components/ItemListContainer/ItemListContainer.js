@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
 import mockProducts from '../../utils/mockProducts';
 
+
 //componente declarado forma moderna
 const ItemListContainer = ({children}) => {
     const [products , setProducts]= useState([]);
@@ -22,14 +23,15 @@ const ItemListContainer = ({children}) => {
             console.log("Termino la llamada")
         })
     }, [] )
-    
 
     return (
         <div>
             <h2 className='title-product'>{children}</h2>
             <div className="container-cards">
                 <ItemList array={mockProducts} />
+                
             </div>
+            
         </div>
     )
 }

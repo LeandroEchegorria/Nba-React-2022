@@ -2,9 +2,7 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import LogoBar from './components/LogoBar/LogoBar';
-
-
-
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
@@ -14,7 +12,9 @@ function App() {
       
       <ItemListContainer>
         <h3>Productos Recomendados</h3>
+        
       </ItemListContainer>
+      <ItemDetailContainer/>
 
     </div>
   );

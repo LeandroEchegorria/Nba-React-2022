@@ -1,6 +1,7 @@
 import './Item.css';
 import ItemCount from '../ItemCount/ItemCount';
 
+
 const Item = ({data}) => {
   const {title, size, price, image, stock} = data;
 

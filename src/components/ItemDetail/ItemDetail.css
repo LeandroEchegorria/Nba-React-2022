@@ -1,0 +1,19 @@
+
+.item-detail {
+    width: 80%;
+    margin: auto;
+    
+}
+.item-detail-text{
+    width: 30%;
+    margin-right: 130px;
+    color: black;
+    float: right;
+}
+.item-detail-image img{
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+    float: left;
+    border: solid 1px gray;
+}

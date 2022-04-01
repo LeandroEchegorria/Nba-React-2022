@@ -14,6 +14,7 @@ const ItemList = (props) => {
                     <Item data={producto} key={id}/>
                 )
             })}
+            
 
         </div> 
         
