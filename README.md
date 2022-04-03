@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# NBA 2022
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an Ecommerce of NBA indumentary and shoes for playing Basketball
 
 ## Available Scripts
 

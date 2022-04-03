@@ -1,8 +1,13 @@
 .buyBtn {
     width: 90%;
     margin-top: 20px;
+    margin-bottom: 0px;
     background-color: rgb(51, 133, 255);
     color: white;
     border-radius: 10px;
     height: 30px;
+}
+.itemCount p{
+    display: inline-flex;
+    margin: 10px;
 }

@@ -1,12 +1,8 @@
 import Item from '../Item/Item';
-
 import './ItemList.css';
 
-
-//componente declarado forma moderna
 const ItemList = (props) => {
     
-
     return (
         <div className="container-cards">
             {props.array.map( (producto , id) => {
@@ -15,9 +11,7 @@ const ItemList = (props) => {
                 )
             })}
             
-
         </div> 
-        
     )
 }
 export default ItemList;

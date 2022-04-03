@@ -23,9 +23,13 @@ import './ItemCount.css';
     <div>
     {(stock<1) ? <h2>Sin Stock</h2> 
     : <div>
-        <button onClick={onRemove}>-</button>
-        <p>{count}</p>
-        <button onClick={onPlus}>+</button>
+        
+        <p className='itemCount'>
+          <button onClick={onRemove}>-</button>
+          <p>{count}</p>
+          <button onClick={onPlus}>+</button>
+        </p>
+        
         <p>Stock: {stock}</p>
         <button className='buyBtn' onClick={onAdd}>Agregar</button>
       </div>
