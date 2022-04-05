@@ -4,16 +4,24 @@
 }
 .navbar li Button:hover{
     box-shadow: 2px 2px 2px white ;
+    
+
 }
 ul.navbar{
     list-style: none;
     display: flex;
     align-items: center;
     
+    
+}
+a{
+  text-decoration: none;  
 }
 .navbar li{
     width: fit-contents;
     margin: 5px;
+    
+
 }
 h1{
     color: white;

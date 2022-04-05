@@ -4,24 +4,29 @@ import Button from '@mui/material/Button';
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
 import Menu from '../Menu/Menu';
+import {Link} from 'react-router-dom';
 
 
 function NavBar ({ children }) {
     return (
       <header className="main-header">
         <div className='container-logo'>
-          <img src={logo} className="img-header" alt=''/>
+          <Link to={'/'}>
+            <img src={logo} className="img-header" alt=''/>
+          </Link>
+          
         </div>
         <h1>NBA Basketball Shop</h1>
 
         <ul className='navbar'>
-            <li><Button variant="contained">Home</Button></li>
+            <li><Link to={'/'}><Button variant="contained">Home</Button></Link></li>
             <li>
-              <Menu title="Productos" option1={'Camisetas'} option2={'Zapatillas'} option3={'Accesorios'} />
+              <Link to={'/category'}>
+                <Menu title="Productos" option1={'Adidas'} option2={'Nike'} option3={'otras'} />
+              </Link>
             </li>
-            <li><Button variant="contained">Nosotros</Button></li>
-            <li><Button variant="contained">Contacto</Button></li>
-            <li><Button variant="contained"><CartWidget /></Button></li>
+            <li><Link to={'/contacto'}><Button variant="contained">Contacto</Button></Link></li>
+            <li><Link to={'/productos'}><Button variant="contained"><CartWidget /></Button></Link></li>
 
         </ul>
       </header>

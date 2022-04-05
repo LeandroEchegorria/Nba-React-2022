@@ -6,51 +6,57 @@ import item5 from '../../src/img/shoes/Adidas_Trae_Young1.png';
 import item6 from '../../src/img/shoes/Adidas_DON_ISSUE3.png';
 
 const mockProducts = [{
-    "id": 1,
-    "title":"Adidas Adizero Rose 1",
-    "size": 9 ,
-    "price": 145,
-    "image": item1,
-    "stock": 0
+    id: '1',
+    title:"Adidas Adizero Rose 1",
+    size: 9 ,
+    price: 145,
+    image: item1,
+    stock: 0,
+    category: "adidas"
 },
 {
-    "id": 2,
-    "title": "Nike Giannis Inmortality",
-    "size": 8 ,
-    "price": 145,
-    "image": item2,
-    "stock": 5
+    id: '2',
+    title: "Nike Giannis Inmortality",
+    size: 8 ,
+    price: 145,
+    image: item2,
+    stock: 5,
+    category: "nike"
 },
 {
-    "id": 3,
-    "title": "Adidas DON Issue 2",
-    "size":9 ,
-    "price":145,
-    "image": item3,
-    "stock": 3
+    id: '3',
+    title: "Adidas DON Issue 2",
+    size:9 ,
+    price:145,
+    image: item3,
+    stock: 3,
+    category: "adidas"
 },
 {
-    "id": 4,
-    "title": "Nike KD14",
-    "size":9.5 ,
-    "price":100,
-    "image": item4,
-    "stock": 0
+    id: '4',
+    title: "Nike KD14",
+    size:9.5 ,
+    price:100,
+    image: item4,
+    stock: 0,
+    category: "nike"
 },
 {
-    "id": 5,
-    "title": "Adidas Trae Young 1",
-    "size":9.5 ,
-    "price":110,
-    "image": item5,
-    "stock": 2
+    id: '5',
+    title: "Adidas Trae Young 1",
+    size:9.5 ,
+    price:110,
+    image: item5,
+    stock: 2,
+    category: "adidas"
 },    
 {
-    "id": 6,
-    "title": "Adidas DON Issue 3",
-    "size": 9.5 ,
-    "price": 125,
-    "image": item6,
-    "stock": 4
+    id: '6',
+    title: "Adidas DON Issue 3",
+    size: 9.5 ,
+    price: 125,
+    image: item6,
+    stock: 4,
+    category: "adidas"
 }]
 export default mockProducts;

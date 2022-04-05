@@ -1,9 +1,11 @@
 import './Item.css';
 import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
+
 
 
 const Item = ({data}) => {
-  const {title, size, price, image, stock} = data;
+  const {title, size, price, image, stock ,id} = data;
 
   return (
     <div className="card-item">
@@ -13,7 +15,7 @@ const Item = ({data}) => {
       <p>Talle: {size}</p>
 
       <ItemCount stock={stock}/>
-
+      <Link to={`/productos/${id}`}><button className='buyBtn'>Vista rápida</button></Link>
     </div>
     
   )

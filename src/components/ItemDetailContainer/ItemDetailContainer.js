@@ -4,7 +4,7 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () =>{
 
-    const [ props , setProps] = useState([]);
+    const [ props , setProps] = useState({});
 
     const getItem = () => {
         return new Promise ( (resolve,reject) => {

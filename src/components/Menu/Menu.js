@@ -2,6 +2,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import {Link} from 'react-router-dom';
 
 export default function BasicMenu({title, option1, option2, option3}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -33,9 +34,9 @@ export default function BasicMenu({title, option1, option2, option3}) {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>{option1}</MenuItem>
-        <MenuItem onClick={handleClose}>{option2}</MenuItem>
-        <MenuItem onClick={handleClose}>{option3}</MenuItem>
+        <Link to={'/adidas/'}><MenuItem onClick={handleClose}>{option1}</MenuItem></Link>
+        <Link to={'/nike/'}><MenuItem onClick={handleClose}>{option2}</MenuItem></Link>
+        <Link to={'/otras/'}><MenuItem onClick={handleClose}>{option3}</MenuItem></Link>
       </Menu>
     </div>
   );
