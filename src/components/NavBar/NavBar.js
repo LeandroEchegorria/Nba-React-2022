@@ -3,7 +3,7 @@ import logo from '../../logo.png'
 import Button from '@mui/material/Button';
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
-import Menu from '../Menu/Menu';
+import Menu from './Menu/Menu'
 import {Link} from 'react-router-dom';
 
 
@@ -21,12 +21,12 @@ function NavBar ({ children }) {
         <ul className='navbar'>
             <li><Link to={'/'}><Button variant="contained">Home</Button></Link></li>
             <li>
-              <Link to={'/category'}>
+              <Link to={'/'}>
                 <Menu title="Productos" option1={'Adidas'} option2={'Nike'} option3={'otras'} />
               </Link>
             </li>
             <li><Link to={'/contacto'}><Button variant="contained">Contacto</Button></Link></li>
-            <li><Link to={'/productos'}><Button variant="contained"><CartWidget /></Button></Link></li>
+            <li><Link to={'/'}><Button variant="contained"><CartWidget /></Button></Link></li>
 
         </ul>
       </header>

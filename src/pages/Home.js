@@ -1,7 +1,10 @@
+import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+
 const HomePage = () => {
     return (
         <div >
-            <h2>Pagina de Home</h2>
+            <h2 className="home">Zapatillas de Basketball</h2>
+            <ItemListContainer />
         </div>
     )
 }

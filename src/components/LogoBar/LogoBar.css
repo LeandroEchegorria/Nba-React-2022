@@ -5,11 +5,11 @@
     justify-content: space-evenly;
 }
 img {
-    width: 40px;
+    width: 100%;
     display: flex;
     align-items: center;
  
 }
 ul{
-    padding-inline-start: 5px;
+    padding-inline-start: 1px;
 }

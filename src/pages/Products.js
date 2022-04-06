@@ -1,10 +1,13 @@
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+import { useParams } from "react-router-dom";
 
 const ProductPage = () => {
+    const {category} = useParams();
+
     return (
         <div>
-            <ItemListContainer>
-                <h3>Productos Recomendados</h3>
+            <ItemListContainer category={category}>
+                <h3>Productos {category}</h3>
             </ItemListContainer>
 
         </div>
