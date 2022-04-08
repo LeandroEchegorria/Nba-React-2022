@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import LogoBar from './components/LogoBar/LogoBar';
+import Cart from './components/Cart/Cart';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ProductPage from './pages/Products';
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<HomePage />}/>
           <Route path='/:category' element={<ProductPage/>}/> 
           <Route path='/:category/:id' element={<ItemDetail />}/> 
+          <Route path='/cart' element={<Cart/>}/>
           <Route path='*' element={<h1>Error 404: Page not found</h1>}/>
         </Routes>
         
