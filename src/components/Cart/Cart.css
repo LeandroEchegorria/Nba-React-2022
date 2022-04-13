@@ -1,0 +1,11 @@
+img.cart-image {
+    width: 15%;
+}
+.buyBtn2 {
+    width: 30%;
+    background-color: rgb(51, 133, 255);
+    color: white;
+    border-radius: 10px;
+    height: 30px;
+    margin: auto;
+}

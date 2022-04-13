@@ -17,8 +17,9 @@ header.main-header {
 .container-logo img {
   width: 100%;
 }
-h1{
-  background-color: black;
+h1.text-center{
+  background-color: gray;
+  
 }
 
 

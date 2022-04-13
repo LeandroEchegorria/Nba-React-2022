@@ -8,29 +8,30 @@ import ProductPage from './pages/Products';
 import HomePage from './pages/Home';
 import ContactPage from './pages/Contact';
 import ItemDetail from './components/ItemDetail/ItemDetail';
+//context
+import CartContext from './context/CartContext';
+import { CartProvider } from './context/CartContext';
+
 
 function App() {
   return (
     
     <div className="App">
-      <BrowserRouter>
-        <NavBar />
-        <LogoBar/>
-        <Routes>
-          <Route path='/contacto' element={<ContactPage />}/>
-          <Route path='/' element={<HomePage />}/>
-          <Route path='/:category' element={<ProductPage/>}/> 
-          <Route path='/:category/:id' element={<ItemDetail />}/> 
-          <Route path='/cart' element={<Cart/>}/>
-          <Route path='*' element={<h1>Error 404: Page not found</h1>}/>
-        </Routes>
-        
-      </BrowserRouter>
-    </div>
- 
-    
-
-   
+      <CartProvider>
+        <BrowserRouter>
+          <NavBar />
+          <LogoBar/>
+          <Routes>
+            <Route path='/contacto' element={<ContactPage />}/>
+            <Route path='/' element={<HomePage />}/>
+            <Route path='/:category' element={<ProductPage/>}/> 
+            <Route path='/:category/:id' element={<ItemDetail />}/> 
+            <Route path='/cart' element={<Cart/>}/>
+            <Route path='*' element={<h1>Error 404: Page not found</h1>}/>
+          </Routes>            
+        </BrowserRouter>
+      </CartProvider> 
+    </div>  
   );
 }
 

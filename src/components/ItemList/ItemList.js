@@ -7,7 +7,7 @@ const ItemList = (props) => {
         <div className="container-cards">
             {props.array.map( (producto , id) => {
                 return (
-                    <Item data={producto} key={id}/>
+                    <Item data={producto} key={id} />
                 )
             })}
             

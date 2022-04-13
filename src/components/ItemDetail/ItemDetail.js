@@ -1,8 +1,10 @@
 import './ItemDetail.css';
 import ItemCount from "../ItemCount/ItemCount";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams , Link} from "react-router-dom";
 import mockProducts from "../../utils/mockProducts";
+import CartContext from '../../context/CartContext';
+
 
 
 const ItemDetail = ({props}) => {
@@ -11,6 +13,10 @@ const ItemDetail = ({props}) => {
     const [product, setProduct] = useState({});
     const [contador, setContador] = useState(0);
     const [mostrarItemCount, setMostrarItemCount] = useState(true);
+    
+
+    //context
+    const {cartProducts, addProductToCart} = useContext(CartContext)
 
     useEffect( () => {
         filterProductById(mockProducts, id);
@@ -27,7 +33,8 @@ const ItemDetail = ({props}) => {
 
     const addProduct = (e,cant) =>  {
         setContador(cant)
-        alert(`Agregaste ${cant} productos `)
+        console.log(`Agregaste ${cant} productos `)
+        addProductToCart( {...product, quantity: cant} )
         
         
     }
@@ -49,9 +56,14 @@ const ItemDetail = ({props}) => {
                 <h3>Talle: {product.size}</h3>
                 {mostrarItemCount ?(
                         <ItemCount stock={product.stock} addProduct={addProduct}/>
-                        ):( <Link to="/cart">
-                                <button className='buyBtn'>Finalizar Compra</button>
-                            </Link>
+                        ):( <>
+                                <Link to="/cart">
+                                    <button className='buyBtn'>Finalizar Compra</button>
+                                </Link>
+                                <Link to="/">
+                                    <button className='buyBtn'>Continuar comprando</button>
+                                </Link>
+                            </>
                         )
                 }
                 
