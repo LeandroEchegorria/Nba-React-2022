@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import './Cart.css';
 import CartContext from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import { Divider } from "@mui/material";
 
  const Cart = ({props}) => {
     const { cartProducts, deleteOne, sumaTotal, emptyCart } = useContext(CartContext);
@@ -9,13 +10,13 @@ import { Link } from "react-router-dom";
 
     return(
         
-        <div>
-            <h1 className="text-center mt-5">Cart</h1>
+        <div className="cart-container">
+            <h1 className="cart-text">Carrito de Compras</h1>
             <hr />
             
             { (cartProducts.length === 0) &&
             
-                <div>
+                <div className="cart-text">
                     <p>No hay items en tu carrito...</p>
                     <Link to='/'>
                         <button className="buyBtn2">Continuar comprando</button>
@@ -29,7 +30,7 @@ import { Link } from "react-router-dom";
                 <div key={ prod.id } className="row">
                     <div className="cart-products">
                         <h2> {prod.title}</h2>
-                        <p> Precio: $ {prod.price}</p>
+                        <h3> Precio: USD {prod.price}</h3>
                         <p> Cantidad: { prod.quantity}  </p>
                     </div>
                     <div>
@@ -48,7 +49,8 @@ import { Link } from "react-router-dom";
             
             &&
 
-            <div>
+            <div className="cart-text">
+                <Divider />
                 <h4> Total de la compra: USD {sumaTotal()} </h4>
                 <button className="buyBtn2" onClick={emptyCart}>Vaciar carrito</button>
             </div>

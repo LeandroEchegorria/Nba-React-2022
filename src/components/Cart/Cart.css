@@ -1,11 +1,24 @@
 img.cart-image {
     width: 15%;
+    margin-left: 5%;    
+
 }
-.buyBtn2 {
-    width: 30%;
+.buyBtn3 {
+    width: 50%;
     background-color: rgb(51, 133, 255);
     color: white;
     border-radius: 10px;
     height: 30px;
-    margin: auto;
+    margin: auto auto 15px auto;
 }
+.cart-text p{
+    width: 80%;
+    padding: auto;
+    margin: auto;
+
+}
+.cart-container{
+    width: 80%;
+    margin-left: 5%;
+}
+

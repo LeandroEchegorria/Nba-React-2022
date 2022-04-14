@@ -1,8 +1,19 @@
-li p {
-    padding: 0;
-    margin: 0;
+ p  {
+    padding: 5px;
+    margin: 5px;
 
 }
 svg.css-2kgxp5-MuiSvgIcon-root {
     margin-left: 0;
+}
+.item-cart-modal__img{
+    width: 100px;
+}
+.buyBtn2 {
+    width: 30%;
+    background-color: rgb(51, 133, 255);
+    color: white;
+    border-radius: 10px;
+    height: 30px;
+    margin-left: 50px;
 }

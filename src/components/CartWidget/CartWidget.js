@@ -10,7 +10,7 @@ import CartContext from '../../context/CartContext';
 import './CartWidget.css'
 
 const CartWidget = () => {
-    const { cartProducts } = useContext(CartContext)
+    const { cartProducts, cantidad } = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -30,7 +30,7 @@ const CartWidget = () => {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
             />
-            <p>{cartProducts.length}</p>
+            <p>{cartProducts.length >0 && cantidad()}</p>
             <Menu
                 anchorEl={anchorEl}
                 id="account-menu"
@@ -67,17 +67,17 @@ const CartWidget = () => {
                     transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                     anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                 >
-                <p>Carrito de Compras</p>
+                <h3>Carrito de Compras</h3>
                 <Divider />
                 {cartProducts.map( (cartProduct) => {
                     return(
                         <MenuItem className='item-cart-modal' key={cartProduct.id}>
                             <div className='item-cart-modal__img'>
-                                <img src={`./${cartProduct.image}`} alt=''/> 
+                                <img src={`${cartProduct.image}`} alt=''/> 
                             </div>
                             <div className='item-cart-modal__info'>
                                 <p>{cartProduct.title}</p>
-                                <span>$ {cartProduct.price}</span>
+                                <p>USD {cartProduct.price}</p>
                             </div>
                             <div className='item-cart-modal__action'>
                                 <DeleteIcon />
@@ -88,7 +88,7 @@ const CartWidget = () => {
                 
                 <Divider />
                 <div className='footer-modal-cart'>
-                    <Button className="btn-custom"><Link to="/cart">Iniciar la compra</Link></Button>
+                    <button className="buyBtn3"><Link to="/cart">Ir al Carrito</Link></button>
                 </div>
             </Menu>
         </div>

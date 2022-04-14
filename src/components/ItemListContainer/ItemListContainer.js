@@ -4,8 +4,8 @@ import ItemList from '../ItemList/ItemList';
 import mockProducts from '../../utils/mockProducts';
 import getProducts from '../../helpers/getProducts';
 
+
 const ItemListContainer = ({children, category}) => {
-    
     const [products , setProducts]= useState([]);
 
     useEffect( () => {
