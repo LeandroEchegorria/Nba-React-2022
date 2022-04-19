@@ -67,7 +67,7 @@ const CartWidget = () => {
                     transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                     anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                 >
-                <h3>Carrito de Compras</h3>
+                <h3 className='item-cart-modal__info'>Carrito de Compras</h3>
                 <Divider />
                 {cartProducts.map( (cartProduct) => {
                     return(
@@ -79,9 +79,9 @@ const CartWidget = () => {
                                 <p>{cartProduct.title}</p>
                                 <p>USD {cartProduct.price}</p>
                             </div>
-                            <div className='item-cart-modal__action'>
+                         {/*    <div className='item-cart-modal__action' onClick={deleteOne}>
                                 <DeleteIcon />
-                            </div>
+                            </div> */}
                         </MenuItem>
                     )
                 })}

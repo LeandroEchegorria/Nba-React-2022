@@ -28,7 +28,7 @@ function NavBar (props) {
             </Link>
           </li>
           <li><Link to={'/contacto'}><Button variant="contained">Contacto</Button></Link></li>
-          <li><Link to={'/'}><Button variant="contained"><CartWidget /></Button></Link></li>
+          <li><Link to={'/cart'}><Button variant="contained"><CartWidget /></Button></Link></li>
 
 
         </ul>

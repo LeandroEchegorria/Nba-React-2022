@@ -2,8 +2,11 @@ import './ItemDetail.css';
 import ItemCount from "../ItemCount/ItemCount";
 import { useContext, useEffect, useState } from "react";
 import { useParams , Link} from "react-router-dom";
-import mockProducts from "../../utils/mockProducts";
+
 import CartContext from '../../context/CartContext';
+import { doc, getDoc } from "firebase/firestore";
+import db from '../../firebase';
+
 
 
 
@@ -18,26 +21,31 @@ const ItemDetail = ({props}) => {
     //context
     const {cartProducts, addProductToCart} = useContext(CartContext)
 
-    useEffect( () => {
-        filterProductById(mockProducts, id);
-    }, [id])
-    
-    const filterProductById = (array, id) =>{
-        return array.map ( (product) => {
-            if (product.id === id){ 
-                return setProduct(product);
-            }
-        } )
+    const getProducts = async () => {
+        const docRef = doc(db, "productos", id);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+            console.log("Document data:", docSnap.data());
+            let product = docSnap.data()
+            product.id= docSnap.id
+            setProduct(product)
+          } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!");
+          }
     }
 
-
+    useEffect( () => {
+        getProducts()
+    }, [id])
+    
     const addProduct = (e,cant) =>  {
         setContador(cant)
         console.log(`Agregaste ${cant} productos `)
         addProductToCart( {...product, quantity: cant} )
-        
-        
+         
     }
+
     useEffect(()=>{
         if(contador>0){
             setMostrarItemCount(false);

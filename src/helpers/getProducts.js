@@ -1,10 +1,17 @@
-const getProducts = (array) => {
-    return new Promise ( (resolve, reject) => {
-        return setTimeout ( () => {
-            resolve(array);
-            
+import { collection, getDocs } from "firebase/firestore";
+import db from "../firebase";
 
-        }, 2000);
+const getProducts = async (array) => {
+
+    const itemCollection = collection(db, 'productos')
+    const productSnapshot = await getDocs(itemCollection)
+
+    const productList = productSnapshot.docs.map( (doc) => {
+        let product = doc.data()
+        product.id= doc.id
+        return product
     })
+    return productList;
+    
 }
 export default getProducts;
