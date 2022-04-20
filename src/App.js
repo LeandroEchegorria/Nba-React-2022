@@ -7,10 +7,10 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ProductPage from './pages/Products';
 import HomePage from './pages/Home';
 import ContactPage from './pages/Contact';
-import ItemDetail from './components/ItemDetail/ItemDetail';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 //context
-import CartContext from './context/CartContext';
 import { CartProvider } from './context/CartContext';
+
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
             <Route path='/contacto' element={<ContactPage />}/>
             <Route path='/' element={<HomePage />}/>
             <Route path='/:category' element={<ProductPage/>}/> 
-            <Route path='/:category/:id' element={<ItemDetail />}/> 
+            <Route path='/:category/:id' element={<ItemDetailContainer />}/> 
             <Route path='/cart' element={<Cart/>}/>
             <Route path='*' element={<h1>Error 404: Page not found</h1>}/>
           </Routes>            

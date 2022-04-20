@@ -6,7 +6,6 @@ const CartProvider = ({children}) => {
     const [cartProducts , setCartProducts] = useState([])
 
         const addProductToCart = (product) => {
-            console.log(cartProducts)
 
             if (isInCart(product.id)) { 
                 const prod = cartProducts.find( (pr) => pr.id === product.id )
@@ -21,7 +20,6 @@ const CartProvider = ({children}) => {
                 setCartProducts(cartProducts => [...cartProducts, product]);
             }
             
-            console.log(cartProducts)
         }
         const emptyCart = () => {
             setCartProducts([])

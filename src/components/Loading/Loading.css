@@ -1,0 +1,6 @@
+.container-loader{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}

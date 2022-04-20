@@ -4,9 +4,9 @@ import db from "../firebase";
 const getProducts = async (array) => {
 
     const itemCollection = collection(db, 'productos')
-    const productSnapshot = await getDocs(itemCollection)
+    const productsSnapshot = await getDocs(itemCollection)
 
-    const productList = productSnapshot.docs.map( (doc) => {
+    const productList = productsSnapshot.docs.map( (doc) => {
         let product = doc.data()
         product.id= doc.id
         return product
