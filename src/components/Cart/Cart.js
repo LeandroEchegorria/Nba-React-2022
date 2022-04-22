@@ -79,32 +79,29 @@ import Loading from "../Loading/Loading";
                         <button className="buyBtn2">Continuar comprando</button>
                     </Link>
                 </div>
-            
             }   
             {                    
             cartProducts.map((prod) =>(
                 <div key={ prod.id } className="row">
                     <div className="cart-products">
-                        <h2> {prod.title}</h2>
-                        <h3> Precio: USD {prod.price}</h3>
-                        <p> Cantidad: { prod.quantity}  </p>
+                        <h2 className="cart-item"> {prod.title}</h2>
+                        <h3 className="cart-item"> Precio: USD {prod.price}</h3>
+                        <p className="cart-item"> Cantidad: { prod.quantity}  </p>
+                        
                     </div>
-                    <div>
+                    <div className="cartAside">
                         <img className="cart-image" src={`${prod.image}`} alt=""></img>
-                    </div>
-                    <div className="container">
                         <button className="buyBtn2" onClick={() => deleteOne(prod.id)}>Eliminar</button>
-                    
                     </div>
+                    
                 </div>))
-            }
-               
+            }  
         {
             (cartProducts.length >= 1)
             &&
-            <div className="cart-text">
+            <div className="cart-text-bottom">
                 <Divider />
-                <h4> Total de la compra: USD {totalPrice} </h4>
+                <h4 className="cart-total"> Total de la compra: USD {totalPrice} </h4>
                 <button className="buyBtn2" onClick={emptyCart}>Vaciar carrito</button>
                 <button className="buyBtn2" onClick={()=>setOpenModal(true)}>Completar Compra</button>
             </div>
@@ -120,7 +117,7 @@ import Loading from "../Loading/Loading";
                             <input name="phone" type="number" placeholder='Telefono' onChange={handleChange} value={formData.phone}/>
                             <input name="email" type="mail" placeholder='E-mail' onChange={handleChange} value={formData.email}/>
 
-                            <Button className="buyBtn3" type="submit">Enviar</Button>
+                            <Button  type="submit">Enviar</Button>
 
                         </form>
                     </>

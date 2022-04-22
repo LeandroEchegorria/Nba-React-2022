@@ -1,29 +1,47 @@
-img.cart-image {
-    width: 15%;
-    margin-left: 5%;    
+div.cart-container{
 
+    width: 90%;
+    margin: auto;
 }
-.buyBtn3 {
-    width: 50%;
+.row{
+
+    border: dashed 1px;
+    border-color: lightgray;
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    row-gap: 30px;
+}
+.cart-products{
+    
+}
+img.cart-image{
+    width: 200px;
+    margin-top: 10%;
+}
+div.cartAside{
+    margin: auto;
+    width: auto;
+    
+}
+h4.cart-total{
+    margin-left: 5%;
+    font-size: larger;
+    background-color: rgba(255, 0, 0, 0.514);
+    width: fit-content;
+    padding: 5px;
+}
+.cart-text-bottom{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 0px;
     background-color: rgb(51, 133, 255);
-    color: white;
+    
     border-radius: 10px;
     height: 30px;
-    margin: 10px auto 15px auto;
-}
-.buyBtn3:hover{
-    color:black
-}
-.cart-text p{
-    width: 80%;
-    padding: auto;
-    margin: auto;
-
-}
-.cart-container{
-    width: 80%;
-    margin-left: 5%;
-}
-.form-container{
-
 }
