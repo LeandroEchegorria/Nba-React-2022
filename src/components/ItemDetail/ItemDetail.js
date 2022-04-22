@@ -12,7 +12,6 @@ const ItemDetail = ({ db, product}) => {
 
     const addProduct = (e,cant) =>  {
         setContador(cant)
-        console.log(`Agregaste ${cant} productos `)
         addProductToCart( {...product, quantity: cant} )   
     }
 

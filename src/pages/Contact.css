@@ -1,0 +1,23 @@
+.form-container{
+    width: 60%;
+    margin: auto;
+}
+.submitBtn {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    background-color: rgb(51, 133, 255);
+    color: white;
+    border-radius: 10px;
+    height: 30px;
+}
+.submitBtn:hover{
+    background-color:   rgb(32, 82, 156);
+}
+input, textarea{
+    float: right;
+    margin-right: 30%;
+}
+textarea{
+    margin-right: 31%;
+}

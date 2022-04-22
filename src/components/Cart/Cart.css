@@ -9,7 +9,10 @@ img.cart-image {
     color: white;
     border-radius: 10px;
     height: 30px;
-    margin: auto auto 15px auto;
+    margin: 10px auto 15px auto;
+}
+.buyBtn3:hover{
+    color:black
 }
 .cart-text p{
     width: 80%;
@@ -21,4 +24,6 @@ img.cart-image {
     width: 80%;
     margin-left: 5%;
 }
+.form-container{
 
+}
