@@ -21,7 +21,7 @@ const ItemListContainer = ({children, category}) => {
             {
                 loading ? <Loading /> : (
                     <>
-                        <h2 className='title-product'>{children}</h2>
+                        {children}
                         <div className="container-cards">
                             <ItemList array={products}  />
                             

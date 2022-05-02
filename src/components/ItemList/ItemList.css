@@ -1,9 +1,15 @@
 .container-cards{
     width: 80%;
     display: grid;
-    border: solid 1px white;
-    grid-template-columns: 250px 250px 250px 250px ;
+
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+
+
+
+    margin: auto;
+
     
+   
     
     
 }

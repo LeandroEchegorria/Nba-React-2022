@@ -5,7 +5,9 @@ import MenuItem from '@mui/material/MenuItem';
 import Divider from '@mui/material/Divider';
 import { Link } from 'react-router-dom';
 import CartContext from '../../context/CartContext';
-import './CartWidget.css'
+import './CartWidget.css';
+
+
 
 const CartWidget = () => {
     const { cartProducts, cantidad } = useContext(CartContext)
@@ -28,7 +30,7 @@ const CartWidget = () => {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
             />
-            <p>{cartProducts.length >0 && cantidad()}</p>
+            <p>{cantidad()}</p>
             <Menu
                 anchorEl={anchorEl}
                 id="account-menu"
@@ -76,17 +78,16 @@ const CartWidget = () => {
                             <div className='item-cart-modal__info'>
                                 <p>{cartProduct.title}</p>
                                 <p>USD {cartProduct.price}</p>
+                                <p>Cant: {cartProduct.quantity}</p>
                             </div>
-                         {/*    <div className='item-cart-modal__action' onClick={deleteOne}>
-                                <DeleteIcon />
-                            </div> */}
+
                         </MenuItem>
                     )
                 })}
                 
                 <Divider />
                 <div className='footer-modal-cart'>
-                    <button className="buyBtn3"><Link to="/cart">Ir al Carrito</Link></button>
+                    <button className="buyBtn2"><Link to="/cart">Ir al Carrito</Link></button>
                 </div>
             </Menu>
         </div>

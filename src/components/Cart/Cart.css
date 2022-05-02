@@ -6,15 +6,21 @@ div.cart-container{
 .row{
 
     border: dashed 1px;
-    border-color: lightgray;
+    border-color: black;
     display: grid;
     grid-template-columns: 60% auto;
     grid-template-rows: auto auto;
     justify-content: center;
     row-gap: 30px;
 }
-.cart-products{
-    
+.cart-button{
+    display: inline-flex;
+    align-items: center;
+    justify-items: center;
+    color: white;
+}
+.css-2kgxp5-MuiSvgIcon-root{
+    height: 25px;
 }
 img.cart-image{
     width: 200px;
@@ -36,7 +42,7 @@ h4.cart-total{
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+.cartBtn{
     width: 90%;
     margin-top: 20px;
     margin-bottom: 0px;

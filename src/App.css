@@ -1,4 +1,6 @@
-
+div.App{
+  background-color: wheat;
+}
 header.main-header {
   background-color: black;
   width: 100%;
@@ -8,18 +10,13 @@ header.main-header {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-
+  
 }
 
 .container-logo{
   width: 80px;
 }
-.container-logo img {
-  width: 100%;
-}
-h1.text-center{
-  background-color: gray;
-  
-}
+
+
 
 

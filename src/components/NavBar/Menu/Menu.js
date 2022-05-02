@@ -34,9 +34,9 @@ export default function BasicMenu({title, option1, option2, option3}) {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <Link to={'/adidas/'}><MenuItem onClick={handleClose}>{option1}</MenuItem></Link>
-        <Link to={'/nike/'}><MenuItem onClick={handleClose}>{option2}</MenuItem></Link>
-        <Link to={'/otras/'}><MenuItem onClick={handleClose}>{option3}</MenuItem></Link>
+        <Link to={'/Adidas/'}><MenuItem onClick={handleClose}>{option1}</MenuItem></Link>
+        <Link to={'/Nike/'}><MenuItem onClick={handleClose}>{option2}</MenuItem></Link>
+        <Link to={'/Jordan/'}><MenuItem onClick={handleClose}>{option3}</MenuItem></Link>
       </Menu>
     </div>
   );

@@ -1,8 +1,9 @@
+
 .container-logo{
     box-shadow: 5px -5px 5px gray ;
 
 }
-.navbar li Button:hover{
+.navbar li button:hover{
     box-shadow: 2px 2px 2px white ;
 }
 ul.navbar{
@@ -13,10 +14,16 @@ ul.navbar{
 }
 a{
   text-decoration: none;  
+  color: rgb(0, 0, 0);
+
 }
 .navbar li{
     width: fit-contents;
     margin: 5px;
+
+    text-decoration: none;
+    font-size: 20px;
+    list-style: none;
     
 }
 header h1{

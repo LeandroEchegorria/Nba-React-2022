@@ -1,6 +1,9 @@
 .form-container{
     width: 60%;
     margin: auto;
+    border: dashed 1px black;
+    border-radius: 40px;
+    padding: 3%;
 }
 .submitBtn {
     width: 90%;
@@ -20,4 +23,8 @@ input, textarea{
 }
 textarea{
     margin-right: 31%;
+}
+form {
+    margin-left: 15%;
+
 }

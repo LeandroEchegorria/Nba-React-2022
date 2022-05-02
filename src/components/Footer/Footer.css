@@ -1,0 +1,43 @@
+div.footer-main{
+    margin-top: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: 10% 10% ;
+    background-color: black;
+    color: white;
+}
+.footer-col1{
+    padding: 10%;
+    float: left;
+    margin: auto;
+}
+.footer-col2{
+    padding: 1%;
+    float: left;
+    margin: auto;
+}
+.footer-col2 ul{
+    list-style: none;
+}
+.footer-col2 li{
+    padding: 10px;
+}
+.footer-col3 {
+    padding: 3%;
+    float: right;
+    margin: auto;
+}
+img.img-footer{
+    width: 30%;
+    margin: auto;
+    padding: 15%;
+    float: right;
+}
+.footer-icons {
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px;
+    grid-template-rows: 40px;
+    list-style: none;
+    
+}

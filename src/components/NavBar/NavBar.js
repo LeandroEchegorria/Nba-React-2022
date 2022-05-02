@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom';
 function NavBar (props) {
   
     return (
-      <header className="main-header">
+      <header className="main-header" >
         <div className='container-logo'>
           <Link to={'/'}>
             <img src={logo} className="img-header" alt=''/>
@@ -23,12 +23,12 @@ function NavBar (props) {
           
           <li><Link to={'/'}><Button variant="contained">Home</Button></Link></li>
           <li>
-            <Link to={'/'}>
-              <Menu title="Productos" option1={'Adidas'} option2={'Nike'} option3={'otras'} />
-            </Link>
+            
+              <Menu title="Productos" option1={'Adidas'} option2={'Nike'} option3={'Jordan'} />
+            
           </li>
           <li><Link to={'/contacto'}><Button variant="contained">Contacto</Button></Link></li>
-          <li><Link to={'/cart'}><Button variant="contained"><CartWidget /></Button></Link></li>
+          <li><Button variant="contained"><CartWidget /></Button></li>
 
 
         </ul>

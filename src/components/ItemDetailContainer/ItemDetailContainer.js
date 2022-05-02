@@ -38,7 +38,7 @@ const ItemDetailContainer = () =>{
             {
                 (loading) ? ( <Loading/>) : 
 
-                <ItemDetail db={db} product={product}/>
+                <ItemDetail db={db} product={product} />
             }
             
         </div>

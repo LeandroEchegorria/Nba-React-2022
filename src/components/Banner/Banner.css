@@ -1,0 +1,18 @@
+.legend p{
+    color: white;
+    background-color: black;
+    font-size: 500px;
+}
+.carousel .slide img {
+    width: 50%;
+    image-rendering: optimizeQuality;
+ 
+    
+}
+.carousel .slide{
+    width: 100%;
+    background-color: black;
+}
+.carousel .thumbs-wrapper{
+    display: none;
+}

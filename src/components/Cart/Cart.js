@@ -38,22 +38,9 @@ import Loading from "../Loading/Loading";
         e.preventDefault()
         setOrder({...order, buyer: formData})
         emptyCart()
-/*         console.log("name",formData.name.length)
-        console.log("formdata",formData) */
         pushOrder(prevOrder)
         setSendForm(true)
-/*                 
-            ((formData.name.length ===0) 
-                || (formData.phone.length ===0) 
-                    || (formData.email.length===0))
-                    ?  (console.log("Error. Complete los campos"))
-                        : ( 
-                            console.log("avanza"),
-                            pushOrder(prevOrder),
-                            setSendForm(true)
-                            )
 
-             */
             
         }
         
@@ -117,7 +104,7 @@ import Loading from "../Loading/Loading";
                             <input name="phone" type="number" placeholder='Telefono' onChange={handleChange} value={formData.phone}/>
                             <input name="email" type="mail" placeholder='E-mail' onChange={handleChange} value={formData.email}/>
 
-                            <Button  type="submit">Enviar</Button>
+                            <Button className="cartBtn" type="submit">Enviar</Button>
 
                         </form>
                     </>

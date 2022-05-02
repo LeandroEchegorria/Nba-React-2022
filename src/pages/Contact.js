@@ -23,7 +23,7 @@ const ContactPage = () => {
                     <textarea placeholder="Escriba aquí su mensaje"></textarea>
                 </p>
 
-                <Button className="submitBtn" type="submit">Enviar</Button>
+                <button className="submitBtn" type="submit">Enviar</button>
 
             </form>
         </div>

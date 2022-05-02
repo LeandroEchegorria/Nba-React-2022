@@ -1,13 +1,4 @@
-.container-cards{
-    width: 80%;
-    display: grid;
-    border: solid 1px white;
-    grid-template-columns: 250px 250px 250px 250px ;
-    margin: auto;
-    
-    
-    
-}
+
 .title-product{
     margin-left: 30px;
 }
