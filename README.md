@@ -1,6 +1,11 @@
 # NBA 2022
 
-This project is an Ecommerce of NBA indumentary and shoes for playing Basketball
+This project is an Ecommerce of NBA shoes for playing Basketball
+
+![hola](/src/img/adidas.png "LELE")
+
+
+
 
 ## Available Scripts
 

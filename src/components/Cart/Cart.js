@@ -19,6 +19,7 @@ import Loading from "../Loading/Loading";
             email: ''
         },
     )
+    let error= {};
     const [order , setOrder] = useState(
         { 
             buyer: formData,
@@ -26,6 +27,7 @@ import Loading from "../Loading/Loading";
             total: totalPrice
         }
     )
+
     const handleChange = (e) => {
         const {name,value} = e.target
         setFormData({
@@ -33,18 +35,27 @@ import Loading from "../Loading/Loading";
             [name] : value
         })
     }
-    const handleSubmit = (e) => {
-        let prevOrder = {...order, buyer: formData} //genero objeto para pasar a la funcion pushOrder y crear doc en firebase
-        e.preventDefault()
-        setOrder({...order, buyer: formData})
-        emptyCart()
-        pushOrder(prevOrder)
-        setSendForm(true)
-
-            
-        }
-        
-    
+    const handleSubmit = (e) => {     
+        console.log("handle submit")
+        if(!formData.name){
+            error.name="Complete el nombre"
+            console.log("name",error)
+        }else if (!formData.phone){
+            error.phone="Complete el telefono"
+            console.log("phone",error)
+            }else if (!formData.email){
+                error.email="Complete el correo"
+                console.log("email",error)
+            }else {
+                let prevOrder = {...order, buyer: formData} //genero objeto para pasar a la funcion pushOrder y crear doc en firebase
+                e.preventDefault()
+                setOrder({...order, buyer: formData})
+                //emptyCart()
+                pushOrder(prevOrder)
+                setSendForm(true)
+            } 
+        return error;
+    }
 
     const [orderId, setOrderId] = useState()
     const pushOrder = async(info) => {
@@ -100,9 +111,30 @@ import Loading from "../Loading/Loading";
                     <>
                         <h3>Datos del comprador</h3>
                         <form onSubmit={handleSubmit}>
-                            <input name="name" type="text" placeholder='Nombre completo' onChange={handleChange} value={formData.name}/>
-                            <input name="phone" type="number" placeholder='Telefono' onChange={handleChange} value={formData.phone}/>
-                            <input name="email" type="mail" placeholder='E-mail' onChange={handleChange} value={formData.email}/>
+                            <div>
+                                <input 
+                                    name="name" 
+                                    type="text" 
+                                    placeholder='Nombre completo' 
+                                    onChange={handleChange} 
+                                    value={formData.name} 
+                                /> {error.name && <p>{error.name}</p>}
+                            </div>
+                            
+                            <input 
+                                name="phone" 
+                                type="number" 
+                                placeholder='Telefono' 
+                                onChange={handleChange} 
+                                value={formData.phone} 
+                            />
+                            <input 
+                                name="email" 
+                                type="mail" 
+                                placeholder='E-mail' 
+                                onChange={handleChange} 
+                                value={formData.email} 
+                            />
 
                             <Button className="cartBtn" type="submit">Enviar</Button>
 

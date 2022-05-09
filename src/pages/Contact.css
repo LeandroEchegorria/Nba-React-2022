@@ -6,9 +6,10 @@
     padding: 3%;
 }
 .submitBtn {
-    width: 90%;
+    width: 50%;
     margin-top: 20px;
     margin-bottom: 0px;
+    margin-left: auto;
     background-color: rgb(51, 133, 255);
     color: white;
     border-radius: 10px;
@@ -17,14 +18,33 @@
 .submitBtn:hover{
     background-color:   rgb(32, 82, 156);
 }
-input, textarea{
+input{
     float: right;
     margin-right: 30%;
+    padding: 1%;
 }
+
 textarea{
+    float: right;
     margin-right: 31%;
 }
 form {
     margin-left: 15%;
 
+}
+.errores{
+    color: red;
+    font-size: small;
+    padding: 1%;
+    margin-left: 20%;
+}
+.exito{
+    color: green;
+    font-size: large;
+    padding: 1%;
+    
+}
+.formField{
+    width: 100%;
+    margin: 5%;
 }
