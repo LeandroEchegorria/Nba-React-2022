@@ -2,7 +2,7 @@
 
 ## This project is an Ecommerce of NBA shoes for playing Basketball
 
-## The site is fully develop in ReactJS and the database is simulated with Firebase (Google) 
+### The site is fully develop in ReactJS and the database is simulated with Firebase (Google) 
 
 
 
