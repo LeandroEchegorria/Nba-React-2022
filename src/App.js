@@ -14,7 +14,9 @@ import { CartProvider } from './context/CartContext';
 
 
 
+
 function App() {
+  
   return (
     
     <div className="App" >
@@ -32,7 +34,8 @@ function App() {
           </Routes>       
           <Footer />     
         </BrowserRouter>
-      </CartProvider> 
+      </CartProvider>
+      
     </div>  
   );
 }
