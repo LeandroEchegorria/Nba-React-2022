@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Loading from '../Loading/Loading';
 import { useParams } from "react-router-dom";
@@ -13,7 +13,7 @@ const ItemDetailContainer = () =>{
     const [product, setProduct] = useState({});
 
     const getProductsDetail = async () => {
-
+        
         const docRef = doc(db, "productos", id);
         const docSnap = await getDoc(docRef);
 
@@ -24,19 +24,20 @@ const ItemDetailContainer = () =>{
           } else {
             console.log("No such document!");
           }
+          setLoading(false)
     }
-
-    useEffect( () => {
+    getProductsDetail()
+/*     useEffect( () => {
         getProductsDetail()
         .finally( () => setLoading(false))        
-    },[id])
+    },[]) */
 
     
     return(
         <div className="item-detail-container">
             {
                 (loading) ? ( <Loading/>) : 
-
+                
                 <ItemDetail db={db} product={product} />
             }
             
