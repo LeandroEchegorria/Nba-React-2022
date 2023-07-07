@@ -1,10 +1,11 @@
-import { useState , useEffect} from 'react';
+import { useState , useEffect, useRef} from 'react';
 import './ItemCount.css';
 
 
  const ItemCount = ({stock, addProduct}) => {
-   const [count, setCount]= useState(1);
-
+  const [count, setCount]= useState(1);
+  const stockRef = useRef(stock); 
+  
   const onPlus = () => {
     (count < stock) && setCount(count + 1);
   }
@@ -13,9 +14,8 @@ import './ItemCount.css';
   } 
 
   useEffect( () => {
-    stock = stock-count;
- 
-  },[stock])
+    stockRef.current -= count; 
+  },[count])
   return (
     <div>
         <h5 className='itemCount'>
